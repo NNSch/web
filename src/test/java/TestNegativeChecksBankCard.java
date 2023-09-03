@@ -51,7 +51,7 @@ public class TestNegativeChecksBankCard {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79271234567");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        assertEquals("Имя и Фамилия указаны неверно. Допустимы только русские буквы, пробелы, дефисы.",
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.",
                 driver.findElement(By.cssSelector("[data-test-id='name'].input_invalid .input__sub")).getText().trim());
     }
 
